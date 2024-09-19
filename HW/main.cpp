@@ -27,9 +27,10 @@ int main() {
 	}
 	
 	*/
-
+	/*
 	int num1;
 	int reversed_num;
+	 ;
 
 	std::cout << "¬ведите четырехзначное число: ";
 	std::cin >> num1;
@@ -38,14 +39,25 @@ int main() {
 		return 0;
 	}
 	
-	std::cout << num1 / 1000 + num1 / 100 + num1 / 10 + num1 << "\n";
-	std::cout << num1 / 1000 % 10 << "\n";
-	std::cout << num1 / 100 % 10 << "\n";
-	std::cout << num1 / 10 % 10 << "\n";
-	std::cout << num1 % 10 << "\n";
+	reversed_num = ((num1 / 100 % 10 * 1000) + (num1 / 1000 % 10 * 100) + (num1 % 10 * 10) + (num1 / 10 % 10));
+	std::cout << reversed_num;
+
+	*/
+
+	/*
 	
-	std::cout << reversed_num == ((num1 / 100 % 10 * 1000) + (num1 / 1000 % 10 * 100) + (num1 % 10 * 10) + (num1 / 10 % 10));
-
-
+	const int max = 7;
+	int numbers[max];
+	
+	int i{};
+	std::cout << "¬ведите 7 чисел, по очереди: " << "\n";
+	while (i < max)
+	{
+		std::cin >> numbers[i];
+		i++;
+	}
+	std::cout << *std::max_element(std::begin(numbers), std::end(numbers)) << " - это самое большое число из введенных";
+	
+	*/
 	return 0;
 }
