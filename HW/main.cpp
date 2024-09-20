@@ -50,7 +50,7 @@ int main() {
 	int numbers[list_lenght];
 	
 	int i{};
-	std::cout << "¬ведите 7 чисел, по очереди: " << "\n";
+	std::cout << "¬ведите 7 чисел: " << "\n";
 	while (i < list_lenght)
 	{
 		std::cin >> numbers[i];
