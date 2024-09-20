@@ -46,12 +46,12 @@ int main() {
 
 	/*
 	
-	const int max = 7;
-	int numbers[max];
+	const int list_lenght = 7;
+	int numbers[list_lenght];
 	
 	int i{};
 	std::cout << "¬ведите 7 чисел, по очереди: " << "\n";
-	while (i < max)
+	while (i < list_lenght)
 	{
 		std::cin >> numbers[i];
 		i++;
