@@ -1,7 +1,7 @@
 ﻿#include <iostream>
 #include <cstdlib>
-#include <ctime>
-#include <climits>
+#include <Windows.h>
+
 
 const int arrSize = 100;
 const int length = 10;
@@ -77,7 +77,8 @@ int findMax(int arr[][10][10], int depth, int rows, int cols) {
 
 int main() {
     srand(time(NULL));
-
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
 
     int arr[arrSize];
     for (int i = 0; i < arrSize; ++i) {
@@ -85,7 +86,7 @@ int main() {
     }
 
 
-    int minSum = INT_MAX; // чтобы точно не было числа больше чем это
+    int minSum = 0; 
     int bestStart = 0;
     findMinSumSequence(arr, arrSize, 0, 0, minSum, bestStart);
     std::cout << "Позиция начала последовательности из 10 чисел с минимальной суммой: " << bestStart << '\n';
@@ -106,9 +107,9 @@ int main() {
 
     std::cout << "Максимальное значение в двумерном массиве: " << findMax(arr2D, rows, cols) << '\n';
 
-
+    const int rows1 = 10, cols1 = 10;
     const int depth = 2;
-    int arr3D[depth][rows][cols];
+    int arr3D[depth][rows1][cols1];
     for (int i = 0; i < depth; ++i) {
         for (int j = 0; j < rows; ++j) {
             for (int k = 0; k < cols; ++k) {
